@@ -54,5 +54,63 @@ public class SearchTest extends BaseClassTest {
                 Thread.sleep(2000);
                 break; // Exit the loop after clicking the desired suggestion
             }
+
+
         }
-    }}
+    }   @Test   (priority = 4)
+        public void searchboxHome3() throws InterruptedException {
+            SearchGlobal searchGlobal = new SearchGlobal(driver);
+            //WebElement suggestion = (WebElement) searchGlobal.laptopSuggestion();
+            //searchGlobal.laptopSuggestion();
+            Thread.sleep(2000);
+            for (WebElement laptopSuggestion : searchGlobal.laptopSuggestion()) {
+                System.out.println(laptopSuggestion.getText());
+                if (laptopSuggestion.getText().contains("laptop stand")) {
+                    laptopSuggestion.click();
+                    System.out.println("Laptop stand selected successfully");
+                    Thread.sleep(2000);
+                    break; // Exit the loop after clicking the desired suggestion
+                }
+}}          @Test   (priority = 5)
+            public void searchboxHome4() throws InterruptedException {
+                SearchGlobal searchGlobal = new SearchGlobal(driver);
+                //WebElement suggestion = (WebElement) searchGlobal.laptopSuggestion();
+                //searchGlobal.laptopSuggestion();
+                Thread.sleep(2000);
+                for (WebElement laptopSuggestion : searchGlobal.laptopSuggestion()) {
+                    System.out.println(laptopSuggestion.getText());
+                    if (laptopSuggestion.getText().contains("laptop charger")) {
+                        laptopSuggestion.click();
+                        System.out.println("Laptop charger selected successfully");
+                        Thread.sleep(2000);
+                        break; // Exit the loop after clicking the desired suggestion
+                    }
+}}         @Test   (priority = 6)
+            public void searchboxHome5() throws InterruptedException {
+                SearchGlobal searchGlobal = new SearchGlobal(driver);
+                //WebElement suggestion = (WebElement) searchGlobal.laptopSuggestion();
+                //searchGlobal.laptopSuggestion();
+                Thread.sleep(2000);
+                for (WebElement laptopSuggestion : searchGlobal.laptopSuggestion()) {
+                    System.out.println(laptopSuggestion.getText());
+                    if (laptopSuggestion.getText().contains("laptop cooling pad")) {
+                        laptopSuggestion.click();
+                        System.out.println("Laptop cooling pad selected successfully");
+                        Thread.sleep(2000);
+                        break; // Exit the loop after clicking the desired suggestion
+                    }
+    }}      @Test   (priority = 7)
+            public void searchboxHome6() throws InterruptedException {
+                SearchGlobal searchGlobal = new SearchGlobal(driver);
+                //WebElement suggestion = (WebElement) searchGlobal.laptopSuggestion();
+                //searchGlobal.laptopSuggestion();
+                Thread.sleep(2000);
+                for (WebElement laptopSuggestion : searchGlobal.laptopSuggestion()) {
+                    System.out.println(laptopSuggestion.getText());
+                    if (laptopSuggestion.getText().contains("laptop sleeve")) {
+                        laptopSuggestion.click();
+                        System.out.println("Laptop sleeve selected successfully");
+                        Thread.sleep(2000);
+                        break; // Exit the loop after clicking the desired suggestion
+                    }
+}}}
