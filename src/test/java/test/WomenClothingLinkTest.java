@@ -63,7 +63,7 @@ public class WomenClothingLinkTest extends BaseClassTest {
         System.out.println("Wester wear list displayed successfully");
         //Assert.assertTrue(womenClothingLinkPage.isOptionDisplayed("Wester Wear"), "Wester Wear option is not displayed");
         List<String> westernWearOptions = Arrays.asList(
-                "Skirts",
+                "Skirtss",
                 "Waistcoats",
                 "T-Shirts",
                 "Shirts",
@@ -90,10 +90,10 @@ public class WomenClothingLinkTest extends BaseClassTest {
         Thread.sleep(2000);
         System.out.println("Winter wear list displayed successfully");
         List<String>winterWearOptions = Arrays.asList(
-                "Jackets",
+                "Jacketss",
                 "Ponchos",
-                "Sweaters",
-                "Shrugs",
+                "Sweatersaa",
+                "Shrugsaa",
                 "Sweatshirts"
         );
         for (String winterWear : winterWearOptions){

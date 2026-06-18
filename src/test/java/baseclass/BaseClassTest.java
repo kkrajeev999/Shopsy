@@ -1,6 +1,9 @@
 package baseclass;
 
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -37,18 +40,17 @@ public class BaseClassTest {
         }
     }
 
- /*   public String captureScreenshot(String testName) throws IOException {
+    public String captureScreenshot(String testName) throws IOException {
 
         TakesScreenshot ts = (TakesScreenshot) driver;
 
         File source = ts.getScreenshotAs(OutputType.FILE);
 
         String destination =
-                System.getProperty("C:\\Users\\Rajeev Kesharwani\\IdeaProjects\\Selenium_Practice\\Screenshots")
-                        + "/Screenshots/" + testName + ".png";
+                System.getProperty("user.dir") + "/Screenshots/" + testName + ".png";
 
         FileUtils.copyFile(source, new File(destination));
 
         return destination;
-    }*/
+    }
 }
