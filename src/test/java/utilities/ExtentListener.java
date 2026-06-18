@@ -1,7 +1,10 @@
 package utilities;
 
+import baseclass.BaseClassTest;
 import com.aventstack.extentreports.*;
 import org.testng.*;
+
+import java.io.IOException;
 
 public class ExtentListener implements ITestListener {
 
@@ -27,7 +30,22 @@ public class ExtentListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
 
-        test.fail(result.getThrowable());
+        try {
+            BaseClassTest base =
+                    (BaseClassTest) result.getInstance();
+
+            String screenshotPath =
+                    base.captureScreenshot(
+                            result.getMethod().getMethodName());
+
+            test.fail(result.getThrowable());
+
+            test.addScreenCaptureFromPath(screenshotPath);
+        } catch (IOException e) {
+            //throw new RuntimeException(e);
+            e.printStackTrace();
+        }
+
     }
 
     @Override
