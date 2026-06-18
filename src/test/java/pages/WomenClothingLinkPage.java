@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class WomenClothingLinkPage {
@@ -38,8 +39,14 @@ public class WomenClothingLinkPage {
             Thread.sleep(2000);
             List<WebElement> ethnicWearElement = driver.findElements(ethnicWear);
             System.out.println("Number of Ethnic Wear elements found: " + ethnicWearElement.size());
+            List<String> ethnicWearTexts = new ArrayList<>();
             for (WebElement ethnicWear : ethnicWearElement) {
-                System.out.println(ethnicWear.getText());
+                String ethnicweartext = ethnicWear.getText().trim();
+                System.out.println(ethnicweartext);
+                if (!ethnicweartext.isEmpty()) {
+                    ethnicWearTexts.add(ethnicweartext);
+                    System.out.println(ethnicweartext);
+                }
                 System.out.println("Ethnic Wear link clicked successfully");
                 break; // Exit the loop after clicking the desired suggestion
 
@@ -54,6 +61,15 @@ public class WomenClothingLinkPage {
                 for (WebElement westerWear : westerWearElement) {
                     System.out.println(westerWear.getText());
                     System.out.println("Wester Wear link clicked successfully");
+
+                List<String> westerWearTexts  = new ArrayList<>();
+                for (WebElement westerWearoption : westerWearElement) {
+                    String westerweartext = westerWearoption.getText().trim();
+                    if (!westerweartext.isEmpty()) {
+                        westerWearTexts.add(westerweartext);
+                        System.out.println(westerweartext);
+                    }
+                }
         }}
             public void clickWinterWear() throws InterruptedException {
                 Actions action = new Actions(driver);
@@ -65,6 +81,15 @@ public class WomenClothingLinkPage {
                 for (WebElement winterWear : winterWearElement) {
                     System.out.println(winterWear.getText());
                     System.out.println("Winter Wear link clicked successfully");
+                    List<String> winterWearsText = new ArrayList<>();
+                    for (WebElement winterwearoption : winterWearElement){
+                        String winterweartext = winterwearoption.getText().trim();
+                        if (!winterweartext.isEmpty()){
+                            winterWearsText.add(winterweartext);
+                            System.out.println(winterweartext);
+                        }
+                    }
+
     }}
             public void clickInnerWear() throws InterruptedException {
                 Actions action = new Actions(driver);
@@ -88,4 +113,14 @@ public class WomenClothingLinkPage {
                     System.out.println(loungewearAndActivewear.getText());
                     System.out.println("Loungewear and Activewear link clicked successfully");
     }}
+
+    public boolean isWomenClothingLinkDisplayed() {
+        return driver.findElement(womenClothingLink).isDisplayed();
+    }
+
+    public boolean isOptionDisplayed(String option) {
+        By optionLocator = By.xpath("//div[contains(text(),'" + option + "')]");
+        List<WebElement> options = driver.findElements(optionLocator);
+        return !options.isEmpty() && options.get(0).isDisplayed();
+    }
 }
