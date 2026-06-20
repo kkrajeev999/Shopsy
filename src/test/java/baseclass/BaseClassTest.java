@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -20,7 +21,24 @@ public class BaseClassTest {
     public void setUp() {
 
         // Initialize Chrome Browser
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
+
+        //initialize the browser in headless mode
+        ChromeOptions options = new ChromeOptions();
+
+        //for Headmode
+        String headless = System.getProperty("headless");
+        if ("true".equalsIgnoreCase(headless)){
+            options.addArguments("--headless=new");
+            options.addArguments("--window-size=1920,1080");
+
+        }
+        //for headlessmode
+     /*   options.addArguments("--headless=new");
+        options.addArguments("--window-size=1920,1080");
+        System.out.println("HEADLESS MODE ENABLED");*/
+
+        driver = new ChromeDriver(options);
 
         // Optional
         driver.manage().window().maximize();
