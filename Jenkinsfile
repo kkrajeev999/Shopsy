@@ -9,16 +9,13 @@ pipeline {
 
     stages {
 
-        stage('Print Suite') {
-
+        stage('Execute TestNG Suite') {
             steps {
-
                 echo "Selected Suite is: ${params.SUITE}"
-
+                bat "mvn clean test -DsuiteXmlFile=testng/${params.SUITE}.xml"
             }
-
         }
 
-    }
+            }
 
 }
