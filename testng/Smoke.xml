@@ -10,8 +10,8 @@
 
         <classes>
             <class name="test.SearchTest"/>
-            <class name="test.WomenClothingLinkTest"/>
-            <class name="test.MenClothingLinkTest"/>
+            <!--<class name="test.WomenClothingLinkTest"/>
+            <class name="test.MenClothingLinkTest"/>-->
         </classes>
 
     </test>

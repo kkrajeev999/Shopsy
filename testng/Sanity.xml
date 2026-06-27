@@ -9,7 +9,7 @@
     <test name="Regression Test">
 
         <classes>
-            <class name="test.SearchTest"/>
+            <!--<class name="test.SearchTest"/>-->
             <class name="test.WomenClothingLinkTest"/>
             <class name="test.MenClothingLinkTest"/>
         </classes>
