@@ -21,7 +21,6 @@ public class BaseClassTest {
     public void setUp() {
         System.out.println("Inside SearchTest BeforeMethod");
 
-
         // Initialize Chrome Browser
         //driver = new ChromeDriver();
 
