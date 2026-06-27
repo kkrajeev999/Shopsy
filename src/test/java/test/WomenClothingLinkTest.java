@@ -17,22 +17,22 @@ import java.util.List;
 public class WomenClothingLinkTest extends BaseClassTest {
     SoftAssert softAssert = new SoftAssert();
 
-<<<<<<< HEAD
-    @Test (groups = {"Sanity","Regression"})
-=======
+
+
+
     @Test (groups ={"Sanity"})
->>>>>>> shopsybranch1
+
     public void clickWomenClothingLinkTest() throws InterruptedException {
         WomenClothingLinkPage womenClothingLinkPage = new WomenClothingLinkPage(driver);
         womenClothingLinkPage.moveWomenClothingLink();
 
     }
 
-<<<<<<< HEAD
-    @Test (groups = {"Sanity","Regression"})
-=======
+
+
+
     @Test (groups ={"Sanity"})
->>>>>>> shopsybranch1
+
     public void clickEthnicWearTest() throws InterruptedException {
         WomenClothingLinkPage womenClothingLinkPage = new WomenClothingLinkPage(driver);
         womenClothingLinkPage.clickEthnicWear();
@@ -63,11 +63,9 @@ public class WomenClothingLinkTest extends BaseClassTest {
 
 
     }
-<<<<<<< HEAD
-    @Test (groups = {"Sanity","Regression"})
-=======
+
+
     @Test (groups ={"Sanity"})
->>>>>>> shopsybranch1
     public void clickWesterWearTest() throws InterruptedException {
         WomenClothingLinkPage womenClothingLinkPage = new WomenClothingLinkPage(driver);
         womenClothingLinkPage.clickWesterWear();
@@ -95,11 +93,9 @@ public class WomenClothingLinkTest extends BaseClassTest {
         softAssert.assertAll();
     }
 
-<<<<<<< HEAD
-    @Test (groups = {"Sanity","Regression"})
-=======
+
     @Test (groups ={"Sanity"})
->>>>>>> shopsybranch1
+
     public void clickWinterWearTest() throws InterruptedException {
         WomenClothingLinkPage womenClothingLinkPage = new WomenClothingLinkPage(driver);
         womenClothingLinkPage.clickWinterWear();
@@ -120,11 +116,9 @@ public class WomenClothingLinkTest extends BaseClassTest {
 
     }
 
-<<<<<<< HEAD
-    @Test (groups = {"Sanity","Regression"})
-=======
+
     @Test (groups ={"Sanity","Regression"})
->>>>>>> shopsybranch1
+
     public void clickInnerWearTest() throws InterruptedException {
         WomenClothingLinkPage womenClothingLinkPage = new WomenClothingLinkPage(driver);
         womenClothingLinkPage.clickInnerWear();
