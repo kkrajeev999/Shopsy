@@ -30,20 +30,32 @@ public class ExtentListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
 
+        test.fail(result.getThrowable());
+
         try {
-            BaseClassTest base =
-                    (BaseClassTest) result.getInstance();
 
-            String screenshotPath =
-                    base.captureScreenshot(
-                            result.getMethod().getMethodName());
+            BaseClassTest base = (BaseClassTest) result.getInstance();
 
-            test.fail(result.getThrowable());
+            if (base != null && base.driver != null) {
 
-            test.addScreenCaptureFromPath(screenshotPath);
-        } catch (IOException e) {
-            //throw new RuntimeException(e);
+                String screenshotPath =
+                        base.captureScreenshot(result.getMethod().getMethodName());
+
+                if (screenshotPath != null) {
+                    test.addScreenCaptureFromPath(screenshotPath);
+                }
+
+            } else {
+
+                System.out.println("Driver is null. Screenshot not captured.");
+
+            }
+
+        } catch (Exception e) {
+
+            test.warning("Screenshot could not be captured: " + e.getMessage());
             e.printStackTrace();
+
         }
 
     }

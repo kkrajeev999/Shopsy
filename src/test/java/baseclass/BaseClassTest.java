@@ -17,8 +17,10 @@ public class BaseClassTest {
 
     public WebDriver driver;
 
-    @BeforeMethod
+    @BeforeMethod (alwaysRun = true)
     public void setUp() {
+        System.out.println("Inside SearchTest BeforeMethod");
+
 
         // Initialize Chrome Browser
         //driver = new ChromeDriver();
@@ -42,14 +44,17 @@ public class BaseClassTest {
 
         // Optional
         driver.manage().window().maximize();
+        System.out.println("ChromeDriver initialized successfully");
 
         // Open URL
         //driver.get("https://www.google.com/");
         //driver.get("https://www.flipkart.com/");
         driver.get("https://www.shopsy.in/");
+        System.out.println("Shopsy opened successfully");
+
     }
 
-    @AfterMethod
+    @AfterMethod (alwaysRun = true)
     public void tearDown() {
 
         // Close browser
@@ -59,6 +64,11 @@ public class BaseClassTest {
     }
 
     public String captureScreenshot(String testName) throws IOException {
+
+        if (driver == null) {
+            System.out.println("Driver is null. Screenshot cannot be captured.");
+            return null;
+        }
 
         TakesScreenshot ts = (TakesScreenshot) driver;
 
@@ -71,4 +81,5 @@ public class BaseClassTest {
 
         return destination;
     }
+
 }
