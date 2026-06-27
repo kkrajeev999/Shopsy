@@ -17,14 +17,14 @@ import java.util.List;
 public class WomenClothingLinkTest extends BaseClassTest {
     SoftAssert softAssert = new SoftAssert();
 
-    @Test(priority = 1)
+    @Test (groups = {"Sanity","Regression"})
     public void clickWomenClothingLinkTest() throws InterruptedException {
         WomenClothingLinkPage womenClothingLinkPage = new WomenClothingLinkPage(driver);
         womenClothingLinkPage.moveWomenClothingLink();
 
     }
 
-    @Test(priority = 2)
+    @Test (groups = {"Sanity","Regression"})
     public void clickEthnicWearTest() throws InterruptedException {
         WomenClothingLinkPage womenClothingLinkPage = new WomenClothingLinkPage(driver);
         womenClothingLinkPage.clickEthnicWear();
@@ -55,7 +55,7 @@ public class WomenClothingLinkTest extends BaseClassTest {
 
 
     }
-    @Test(priority = 3)
+    @Test (groups = {"Sanity","Regression"})
     public void clickWesterWearTest() throws InterruptedException {
         WomenClothingLinkPage womenClothingLinkPage = new WomenClothingLinkPage(driver);
         womenClothingLinkPage.clickWesterWear();
@@ -83,7 +83,7 @@ public class WomenClothingLinkTest extends BaseClassTest {
         softAssert.assertAll();
     }
 
-    @Test(priority = 4)
+    @Test (groups = {"Sanity","Regression"})
     public void clickWinterWearTest() throws InterruptedException {
         WomenClothingLinkPage womenClothingLinkPage = new WomenClothingLinkPage(driver);
         womenClothingLinkPage.clickWinterWear();
@@ -104,7 +104,7 @@ public class WomenClothingLinkTest extends BaseClassTest {
 
     }
 
-    @Test(priority = 5)
+    @Test (groups = {"Sanity","Regression"})
     public void clickInnerWearTest() throws InterruptedException {
         WomenClothingLinkPage womenClothingLinkPage = new WomenClothingLinkPage(driver);
         womenClothingLinkPage.clickInnerWear();
