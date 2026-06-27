@@ -12,22 +12,14 @@ import utilities.ExtentListener;
 public class SearchTest extends BaseClassTest {
 
 
-<<<<<<< HEAD
-    @Test (groups = {"Smoke"})
-=======
     @Test (groups ={"Smoke"})
->>>>>>> shopsybranch1
     public void seachboxHome() throws InterruptedException {
         SearchGlobal searchGlobal = new SearchGlobal(driver);
         searchGlobal.laptopSuggestion();
     }
 
 
-<<<<<<< HEAD
-    @Test (groups = {"Smoke"})
-=======
     @Test (groups ={"Smoke"})
->>>>>>> shopsybranch1
     public void searchboxHome1() throws InterruptedException {
         SearchGlobal searchGlobal = new SearchGlobal(driver);
         //WebElement suggestion = (WebElement) searchGlobal.laptopSuggestion();
@@ -48,11 +40,7 @@ public class SearchTest extends BaseClassTest {
             }
 
     }}
-<<<<<<< HEAD
-        @Test   (groups = {"Smoke"})
-=======
         @Test   (groups ={"Smoke"})
->>>>>>> shopsybranch1
        public void searchboxHome2() throws InterruptedException {
         SearchGlobal searchGlobal = new SearchGlobal(driver);
         //WebElement suggestion = (WebElement) searchGlobal.laptopSuggestion();
@@ -69,11 +57,7 @@ public class SearchTest extends BaseClassTest {
 
 
         }
-<<<<<<< HEAD
-    }   @Test   (groups = {"Smoke"})
-=======
     }   @Test   (groups ={"Smoke"})
->>>>>>> shopsybranch1
         public void searchboxHome3() throws InterruptedException {
             SearchGlobal searchGlobal = new SearchGlobal(driver);
             //WebElement suggestion = (WebElement) searchGlobal.laptopSuggestion();
@@ -87,11 +71,7 @@ public class SearchTest extends BaseClassTest {
                     Thread.sleep(2000);
                     break; // Exit the loop after clicking the desired suggestion
                 }
-<<<<<<< HEAD
-}}          @Test   (groups = {"Smoke"})
-=======
 }}          @Test   (groups ={"Smoke"})
->>>>>>> shopsybranch1
             public void searchboxHome4() throws InterruptedException {
                 SearchGlobal searchGlobal = new SearchGlobal(driver);
                 //WebElement suggestion = (WebElement) searchGlobal.laptopSuggestion();
@@ -105,11 +85,7 @@ public class SearchTest extends BaseClassTest {
                         Thread.sleep(2000);
                         break; // Exit the loop after clicking the desired suggestion
                     }
-<<<<<<< HEAD
-}}         @Test   (groups = {"Smoke"})
-=======
 }}         @Test   (groups ={"Smoke"})
->>>>>>> shopsybranch1
             public void searchboxHome5() throws InterruptedException {
                 SearchGlobal searchGlobal = new SearchGlobal(driver);
                 //WebElement suggestion = (WebElement) searchGlobal.laptopSuggestion();
@@ -123,11 +99,7 @@ public class SearchTest extends BaseClassTest {
                         Thread.sleep(2000);
                         break; // Exit the loop after clicking the desired suggestion
                     }
-<<<<<<< HEAD
-    }}      @Test   (groups = {"Smoke"})
-=======
     }}      @Test   (groups ={"Smoke"})
->>>>>>> shopsybranch1
             public void searchboxHome6() throws InterruptedException {
                 SearchGlobal searchGlobal = new SearchGlobal(driver);
                 //WebElement suggestion = (WebElement) searchGlobal.laptopSuggestion();
