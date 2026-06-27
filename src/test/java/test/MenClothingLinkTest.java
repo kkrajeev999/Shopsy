@@ -14,6 +14,7 @@ import java.util.List;
 
 @Listeners(ExtentListener.class)
 public class MenClothingLinkTest extends BaseClassTest {
+
     SoftAssert softAssert = new SoftAssert();
 
 
@@ -27,7 +28,6 @@ public class MenClothingLinkTest extends BaseClassTest {
 
 
     @Test (groups = {"Regression"})
-
     public void clickEthnicWearTest() throws InterruptedException {
         MenClothingLinkPage menClothingLinkPage = new MenClothingLinkPage(driver);
         menClothingLinkPage.clickEthnicWear();
