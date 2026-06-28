@@ -24,19 +24,37 @@ pipeline {
 
             mail(
                     to: 'kkrajeev999@gmail.com',
-                    subject: "Jenkins Test Build #${env.BUILD_NUMBER}",
-                    body: """Build Completed
 
-Job : ${env.JOB_NAME}
+                    subject: "Automation Execution | ${currentBuild.currentResult} | Build #${env.BUILD_NUMBER}",
 
-Status : ${currentBuild.currentResult}
+                    body: """
 
-URL : ${env.BUILD_URL}
+===================================================
+
+            AUTOMATION EXECUTION REPORT
+
+===================================================
+
+Project          : ${env.JOB_NAME}
+
+Build Number     : ${env.BUILD_NUMBER}
+
+Execution Suite  : ${params.SUITE}
+
+Build Status     : ${currentBuild.currentResult}
+
+Build URL
+
+${env.BUILD_URL}
+
+===================================================
+
+Regards,
+
+QA Automation Team
+
+===================================================
+
 """
             )
-
-        }
-
-    }
-
-}
+        }}}
